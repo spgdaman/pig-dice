@@ -1,13 +1,13 @@
-html,body {
+html, body {
   margin: 0;
 }
 
-body{
+body {
   background-color: #1b1919;
   color: gray;
 }
 
-.center{
+.center {
   text-align: center
 }
 
@@ -21,9 +21,19 @@ body{
   display: inline-block;
   height: 2.5rem;
   width: 2.5rem;
-  clear:both;
+  clear: both;
 }
 
-.player{
+.player {
   color: #6effbf;
+}
+
+.btn {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+#dice {
+  margin-top: 10px;
+  color: red;
 }
