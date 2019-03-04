@@ -18,7 +18,7 @@ Clone or download the project via the link in the description.
 
 ## Technologies used
 
-HTML, CSS and JavaScript.
+HTML, CSS, JavaScript, jQuery.
 
 ## Contact information
 

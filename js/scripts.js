@@ -33,7 +33,7 @@ Players.prototype.roll = function() {
 };
 
 Players.prototype.winner = function() {
-  if(this.scoreBoard >= 100) {
+  if (this.scoreBoard >= 100) {
     alert(this.name + "! You won the game!");
   }
 };
