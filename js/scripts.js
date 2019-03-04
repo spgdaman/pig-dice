@@ -70,7 +70,7 @@ $(document).ready(function() {
     function readyPlayerTwo(){
       playerTwo.roll();
       var cumulativeScore = function() {
-        return playerOne.cumulativeScore;
+        return playerTwo.cumulativeScore;
       };
 
       var cumScoreArray = cumulativeScore();
@@ -78,15 +78,15 @@ $(document).ready(function() {
       var checkIfOne = reverseArray[0];
 
       if( checkIfOne == 1) {
-        playerOne.clear();
-        alert("You lose your points, it's Player 2's turn to play");
+        playerTwo.clear();
+        alert("You lose your points, it's Player 1's turn to play");
       }
 
-        return playerOne.tempScore;
+        return playerTwo.tempScore;
 
     }
 
-    var insertScore = readyPlayerOne();
+    var insertScore = readyPlayerTwo();
 
     if(insertScore == 0){
       $("span#dice").empty();
