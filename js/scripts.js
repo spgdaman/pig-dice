@@ -16,6 +16,10 @@ Players.prototype.tempScore = function() {
   return this.tempscore;
 };
 
+Players.prototype.scoreBoard = function() {
+  return this.scoreBoard;
+};
+
 Players.prototype.hold = function(points) {
   this.scoreBoard += this.tempScore;
 };
@@ -100,6 +104,9 @@ $(document).ready(function() {
   $("button#hold").click(function() {
     playerOne.hold();
 
-    $
+    $("span#p1-score").text(playerOne.scoreBoard);
+    $("span#dice").empty();
+
+    alert("It is Player Two's turn to play!");
   });
 });
