@@ -34,9 +34,11 @@ Players.prototype.roll = function() {
 
 Players.prototype.winner = function() {
   if (this.scoreBoard >= 100) {
-    alert(this.name + "! You won the game!");
+    alert(this.name+ "! You won the game!");
+    location.reload();
   }
 };
+
 
 // jQuery code
 $(document).ready(function() {
