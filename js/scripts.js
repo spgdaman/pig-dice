@@ -2,16 +2,12 @@ var Players = function(name) {
   this.name = name;
   this.scoreBoard = 0;
   this.tempScore = 0;
-  this.showScore = 0;
   this.cumulativeScore = [];
 };
 
 var playerOne = new Players("Player 1");
 var playerTwo = new Players("Player 2");
 
-// Players.prototype.score = function(number) {
-//   this.scoreBoard += number;
-// };
 
 Players.prototype.tempScore = function() {
   return this.tempscore;
@@ -36,7 +32,7 @@ Players.prototype.roll = function() {
   this.cumulativeScore.push(random);
 };
 
-
+// jQuery code
 $(document).ready(function() {
   $("button#roll-1").click(function() {
     function readyPlayerOne() {
@@ -53,13 +49,10 @@ $(document).ready(function() {
         playerOne.clear();
         alert("You lose your points, it's Player 2's turn to play");
       }
-
       return checkIfOne;
-
     }
 
     var insertScore = readyPlayerOne();
-
     if (insertScore == 1) {
       $("span#dice").empty();
     } else {
@@ -68,7 +61,6 @@ $(document).ready(function() {
   });
 
   $("button#roll-2").click(function() {
-
     function readyPlayerTwo() {
       playerTwo.roll();
       var cumulativeScore = function() {
@@ -83,24 +75,19 @@ $(document).ready(function() {
         playerTwo.clear();
         alert("You lose your points, it's Player 1's turn to play");
       }
-
       return checkIfOne;
-
     }
 
     var insertScore = readyPlayerTwo();
-
     if (insertScore == 1) {
       $("span#dice").empty();
     } else {
       $("span#dice").text(insertScore);
     }
-
   });
 
   $("button#hold-1").click(function() {
     playerOne.hold();
-
     $("span#p1-score").text(playerOne.scoreBoard);
     $("span#dice").empty();
     playerOne.tempScore = 0;
@@ -110,12 +97,10 @@ $(document).ready(function() {
 
   $("button#hold-2").click(function() {
     playerTwo.hold();
-
     $("span#p2-score").text(playerTwo.scoreBoard);
     $("span#dice").empty();
     playerTwo.tempScore = 0;
 
     alert("It is Player 1's turn to play");
   });
-
 });
