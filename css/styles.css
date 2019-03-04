@@ -12,16 +12,7 @@ body {
 }
 
 .title {
-  font-size: 5rem;
-}
-
-.pig-dice {
-  margin-left: 50%;
-  margin-right: 50%;
-  display: inline-block;
-  height: 2.5rem;
-  width: 2.5rem;
-  clear: both;
+  font-size: 4.5rem;
 }
 
 .player {
