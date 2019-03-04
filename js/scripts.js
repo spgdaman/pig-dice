@@ -32,7 +32,6 @@ Players.prototype.clear = function() {
 
 Players.prototype.roll = function() {
   var random = Math.floor(Math.random() * 6) + 1;
-  this.showScore = random;
   this.tempScore += random;
   this.cumulativeScore.push(random);
 };
@@ -55,7 +54,7 @@ $(document).ready(function() {
         alert("You lose your points, it's Player 2's turn to play");
       }
 
-      return playerOne.showScore;
+      return checkIfOne;
 
     }
 
@@ -85,7 +84,7 @@ $(document).ready(function() {
         alert("You lose your points, it's Player 1's turn to play");
       }
 
-      return playerTwo.showScore;
+      return checkIfOne;
 
     }
 
