@@ -107,12 +107,12 @@ $(document).ready(function() {
   });
 
   $("button#hold-2").click(function() {
-    playerOne.hold();
+    playerTwo.hold();
 
     $("span#p2-score").text(playerOne.scoreBoard);
     $("span#dice").empty();
 
-    alert("It is Player 2's turn to play");
+    alert("It is Player 1's turn to play");
   });
 
 });
