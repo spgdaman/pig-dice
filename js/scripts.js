@@ -97,5 +97,9 @@ $(document).ready(function() {
 
   });
 
+  $("button#hold").click(function() {
+    playerOne.hold();
 
+    $
+  });
 });
