@@ -21,7 +21,7 @@ Players.prototype.scoreBoard = function() {
 };
 
 Players.prototype.hold = function() {
-  this.scoreBoard = this.tempScore;
+  this.scoreBoard += this.tempScore;
 };
 
 Players.prototype.clear = function() {
@@ -89,7 +89,7 @@ $(document).ready(function() {
 
     var insertScore = readyPlayerTwo();
 
-    if (insertScore == 0) {
+    if (insertScore == 1) {
       $("span#dice").empty();
     } else {
       $("span#dice").text(insertScore);
@@ -102,6 +102,7 @@ $(document).ready(function() {
 
     $("span#p1-score").text(playerOne.scoreBoard);
     $("span#dice").empty();
+    playerOne.tempScore = 0;
 
     alert("It is Player 2's turn to play");
   });
@@ -109,8 +110,9 @@ $(document).ready(function() {
   $("button#hold-2").click(function() {
     playerTwo.hold();
 
-    $("span#p2-score").text(playerOne.scoreBoard);
+    $("span#p2-score").text(playerTwo.scoreBoard);
     $("span#dice").empty();
+    playerTwo.tempScore = 0;
 
     alert("It is Player 1's turn to play");
   });
