@@ -1,18 +1,20 @@
 # Project Name
 
-Quiz Board
+Pig Dice
 
 ## Project description
 
-This project is about a web app that grades the users answers based on the responses given.
+This project is about a web app where 2 player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold" and earn points.
+
+A player wins when they achieve a score of 100.
 
 ## Author Information
 
-* **Simon Gatheru Waigi** - *Initial work* - [spgdaman](https://github.com/spgdaman).
+-   **Simon Gatheru Waigi** - _Initial work_ - [spgdaman](https://github.com/spgdaman).
 
 ## Set up instructions
 
-Clone or download the project using the link in the description.
+Clone or download the project via the link in the description.
 
 ## Technologies used
 
@@ -20,7 +22,7 @@ HTML, CSS and JavaScript.
 
 ## Contact information
 
-* simonwaigi@outlook.com
+-   simonwaigi@outlook.com
 
 ## License
 
