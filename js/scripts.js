@@ -2,6 +2,7 @@ var Players = function(name) {
   this.name = name;
   this.scoreBoard = 0;
   this.tempScore = 0;
+  this.showScore = 0;
   this.cumulativeScore = [];
 };
 
@@ -31,6 +32,7 @@ Players.prototype.clear = function() {
 
 Players.prototype.roll = function() {
   var random = Math.floor(Math.random() * 6) + 1;
+  this.showScore = random;
   this.tempScore += random;
   this.cumulativeScore.push(random);
 };
