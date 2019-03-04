@@ -32,6 +32,12 @@ Players.prototype.roll = function() {
   this.cumulativeScore.push(random);
 };
 
+Players.prototype.winner = function() {
+  if(this.scoreBoard >= 100) {
+    alert(this.name + "! You won the game!");
+  }
+};
+
 // jQuery code
 $(document).ready(function() {
   $("button#roll-1").click(function() {
@@ -93,6 +99,7 @@ $(document).ready(function() {
     playerOne.tempScore = 0;
 
     alert("It is Player 2's turn to play");
+    playerOne.winner();
   });
 
   $("button#hold-2").click(function() {
@@ -102,5 +109,6 @@ $(document).ready(function() {
     playerTwo.tempScore = 0;
 
     alert("It is Player 1's turn to play");
+    playerTwo.winner();
   });
 });
