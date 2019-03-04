@@ -15,6 +15,11 @@ body {
   font-size: 4.5rem;
 }
 
+.pig-dice {
+  font-size: 35px;
+  line-height: 1;
+}
+
 .player {
   color: #6effbf;
 }
