@@ -28,6 +28,12 @@ body {
   color: #6effbf;
 }
 
+.score {
+  color: green;
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
 .btn {
   margin-bottom: 10px;
   margin-top: 10px;
