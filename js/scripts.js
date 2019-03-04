@@ -30,7 +30,7 @@ Players.prototype.clear = function() {
 };
 
 Players.prototype.roll = function() {
-  var random =  Math.floor(Math.random() * 6) +1;
+  var random = Math.floor(Math.random() * 6) + 1;
   this.tempScore += random;
   this.cumulativeScore.push(random);
 };
@@ -38,7 +38,7 @@ Players.prototype.roll = function() {
 
 $(document).ready(function() {
   $("button#roll-1").click(function() {
-    function readyPlayerOne(){
+    function readyPlayerOne() {
       playerOne.roll();
       var cumulativeScore = function() {
         return playerOne.cumulativeScore;
@@ -48,28 +48,27 @@ $(document).ready(function() {
       var reverseArray = cumScoreArray.reverse();
       var checkIfOne = reverseArray[0];
 
-      if( checkIfOne == 1) {
+      if (checkIfOne == 1) {
         playerOne.clear();
         alert("You lose your points, it's Player 2's turn to play");
       }
 
-        return playerOne.tempScore;
+      return playerOne.tempScore;
 
     }
 
     var insertScore = readyPlayerOne();
 
-    if(insertScore == 1){
+    if (insertScore == 1) {
       $("span#dice").empty();
-    }
-    else {
+    } else {
       $("span#dice").text(insertScore);
     }
   });
 
   $("button#roll-2").click(function() {
 
-    function readyPlayerTwo(){
+    function readyPlayerTwo() {
       playerTwo.roll();
       var cumulativeScore = function() {
         return playerTwo.cumulativeScore;
@@ -79,21 +78,20 @@ $(document).ready(function() {
       var reverseArray = cumScoreArray.reverse();
       var checkIfOne = reverseArray[0];
 
-      if( checkIfOne == 1) {
+      if (checkIfOne == 1) {
         playerTwo.clear();
         alert("You lose your points, it's Player 1's turn to play");
       }
 
-        return playerTwo.tempScore;
+      return playerTwo.tempScore;
 
     }
 
     var insertScore = readyPlayerTwo();
 
-    if(insertScore == 0){
+    if (insertScore == 0) {
       $("span#dice").empty();
-    }
-    else {
+    } else {
       $("span#dice").text(insertScore);
     }
 
