@@ -55,7 +55,7 @@ $(document).ready(function() {
         alert("You lose your points, it's Player 2's turn to play");
       }
 
-      return playerOne.tempScore;
+      return playerOne.showScore;
 
     }
 
@@ -85,7 +85,7 @@ $(document).ready(function() {
         alert("You lose your points, it's Player 1's turn to play");
       }
 
-      return playerTwo.tempScore;
+      return playerTwo.showScore;
 
     }
 
