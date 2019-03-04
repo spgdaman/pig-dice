@@ -20,8 +20,8 @@ Players.prototype.scoreBoard = function() {
   return this.scoreBoard;
 };
 
-Players.prototype.hold = function(points) {
-  this.scoreBoard += this.tempScore;
+Players.prototype.hold = function() {
+  this.scoreBoard = this.tempScore;
 };
 
 Players.prototype.clear = function() {
@@ -38,7 +38,6 @@ Players.prototype.roll = function() {
 
 $(document).ready(function() {
   $("button#roll-1").click(function() {
-
     function readyPlayerOne(){
       playerOne.roll();
       var cumulativeScore = function() {
@@ -60,13 +59,12 @@ $(document).ready(function() {
 
     var insertScore = readyPlayerOne();
 
-    if(insertScore == 0){
+    if(insertScore == 1){
       $("span#dice").empty();
     }
     else {
       $("span#dice").text(insertScore);
     }
-
   });
 
   $("button#roll-2").click(function() {
@@ -101,12 +99,22 @@ $(document).ready(function() {
 
   });
 
-  $("button#hold").click(function() {
+  $("button#hold-1").click(function() {
     playerOne.hold();
 
     $("span#p1-score").text(playerOne.scoreBoard);
     $("span#dice").empty();
 
-    alert("It is Player Two's turn to play!");
+    alert("It is Player 2's turn to play");
   });
+
+  $("button#hold-2").click(function() {
+    playerOne.hold();
+
+    $("span#p2-score").text(playerOne.scoreBoard);
+    $("span#dice").empty();
+
+    alert("It is Player 2's turn to play");
+  });
+
 });
